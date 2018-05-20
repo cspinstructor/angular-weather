@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+{{> stylerefs}}
+
+<!-- Navbar -->
+{{> navbar}}
+
+<!-- Header -->
+<header class="w3-container w3-blue w3-center" style="padding:64px 16px">
+  <h1 class="w3-margin w3-xxxlarge">WELCOME TO WEATHER APP</h1>
+  <p class="w3-xlarge">Template by w3.css</p>
+  <form action="/" method="post">
+     <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" type="submit" formaction="/form">Get Started</button>
+  </form >
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Get the Weather</h1>
+      <h5 class="w3-padding-32">This page allows you to get the weather of any address</h5>
+
+      <p class="w3-text-grey">It runs on node.js, express.js, axios.js and handlebars.js</p>
+    </div>
+
+    <div class="w3-third w3-center">
+      <img src="http://blog.comperiosearch.com/wp-content/uploads/2012/09/handlebars_logo.png" alt="handlebars logo" >
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <img src="nodejslogo.png" alt="nodejs logo" width="180" height="128">
+    </div>
+
+    <div class="w3-twothird">
+      <h1>How tos</h1>
+      <h5 class="w3-padding-32">Just click on the Get Started button to begin</h5>
+
+      <p class="w3-text-grey">Enjoy the app!</p>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+{{> footer}}
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
