@@ -1,3 +1,8 @@
-<p>
-  form works!
-</p>
+<h2 class="page-header text-center">Get Weather Form</h2>
+<form (submit)="onRegisterSubmit()">
+  <div class="form-group">
+    <label>Address</label>
+    <input type="text" [(ngModel)]="address" name="address" class="form-control">
+    <input type="submit" class="btn btn-primary" value="Submit">
+  </div>
+</form>

@@ -12,3 +12,57 @@ Create a components folder inside app. cd components and do:
 
 Insert:  <app-navbar></app-navbar>  inside
 app.component.html
+
+Change title of index.html to: Weather App
+
+Goto bootswatch.com and look for sandstone theme select :
+https://bootswatch.com/4/sandstone/bootstrap.min.css
+and copy its link and paste in index.html just below the <title>:
+
+  <link rel="stylesheet" href="https://bootswatch.com/4/sandstone/bootstrap.min.css">
+
+Import the following in app.modules.ts:
+
+  import { HttpModule } from '@angular/http';
+  import { FormsModule } from '@angular/forms';
+  import { RouterModule, Routes } from '@angular/router';
+
+Also insert in :
+
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    RouterModule.forRoot(appRoutes),
+  ],
+
+Also, create the appRoutes:
+  const appRoutes: Routes = [
+    { path: '', component: HomeComponent },
+    { path: 'error', component: ErrorComponent },
+    { path: 'form', component: FormComponent },
+    { path: 'historical', component: HistoricalComponent },
+    { path: 'result', component: ResultComponent }
+  ]
+
+In app.component.html, insert the router outlet:
+
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+
+Goto:  https://getbootstrap.com/docs/4.1/examples/starter-template/
+Ctrl U to see code.  Copy the <navbar> code and put in navbar.component.html
+Change the navbar-brand class to Weather App.
+
+Replace fixed-top to navbar-default in the first line.
+
+Goto https://www.w3schools.com/bootstrap/default.asp
+and copy the bootstrap jumbotron example to home.component.html
+
+Create the form as shown in form.component.html
+
+Modify form.component.ts accordingly by creating the variable
+  address: String;
+
+and adding the onRegisterSubmit() function. 
