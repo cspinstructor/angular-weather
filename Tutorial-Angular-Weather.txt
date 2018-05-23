@@ -1,0 +1,14 @@
+From within angular-weather folder:
+   ng new angular-src
+
+Open angular.json and change outputPath to:
+../public
+
+Enter angular-src and type: ng serve
+
+Create a components folder inside app. cd components and do:
+
+  ng generate component navbar
+
+Insert:  <app-navbar></app-navbar>  inside
+app.component.html
